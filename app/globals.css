@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+@theme {
+  --color-brandGreen: #2eb781;
+  --color-brandPurple: #934ab3;
+  --color-brandYellow: #f7a619;
+  --color-brandLightGray: #e9eaeb;
+  --color-brandGray: #e7e8e9;
+
+  --font-bricolageGrotesque: 'Bricolage Grotesque', sans-serif;
+}

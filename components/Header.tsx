@@ -51,7 +51,7 @@ const Header = () => {
                 <div className="hidden md:flex items-center gap-4">
                     <Link
                         href="/apply"
-                        className="bg-purple-600 hover:bg-purple-700 text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
+                        className="bg-brandPurple text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
                     >
                         Apply Now
                     </Link>
