@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,25 +24,25 @@ const Header = () => {
                 <nav className="hidden md:flex items-center gap-8">
                     <Link
                         href="/"
-                        className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                        className="text-lg font-medium text-black hover:text-brandPurple transition-colors"
                     >
                         Home
                     </Link>
                     <Link
                         href="/about"
-                        className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                        className="text-lg font-medium text-black hover:text-brandPurple transition-colors"
                     >
                         About Us
                     </Link>
                     <Link
                         href="/cohorts"
-                        className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                        className="text-lg font-medium text-black hover:text-brandPurple transition-colors"
                     >
                         Cohorts & Courses
                     </Link>
                     <Link
                         href="/tuition"
-                        className="text-sm font-medium text-gray-600 hover:text-black transition-colors"
+                        className="text-lg font-medium text-black hover:text-brandPurple transition-colors"
                     >
                         Tuition & Dates
                     </Link>
@@ -51,7 +52,7 @@ const Header = () => {
                 <div className="hidden md:flex items-center gap-4">
                     <Link
                         href="/apply"
-                        className="bg-brandPurple text-white text-sm font-semibold py-2.5 px-6 rounded-full transition-all duration-200 shadow-sm hover:shadow active:scale-95"
+                        className="text-center border-5 rounded-full border-r border-t border-black bg-brandPurple px-10 py-2 lg:py-3 hover:bg-brandPurple hover:text-white transition-all duration-50 ease-in-out"
                     >
                         Apply Now
                     </Link>
@@ -98,49 +99,7 @@ const Header = () => {
             </div>
 
             {/* Mobile Menu Dropdown */}
-            {isMenuOpen && (
-                <div className="md:hidden absolute top-20 left-0 right-0 bg-white border-b border-gray-100 shadow-lg px-6 py-8 flex flex-col gap-6 animate-in slide-in-from-top-2 fade-in duration-200">
-                    <nav className="flex flex-col gap-4">
-                        <Link
-                            href="/"
-                            className="text-lg font-medium text-gray-600 hover:text-black transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Home
-                        </Link>
-                        <Link
-                            href="/about"
-                            className="text-lg font-medium text-gray-600 hover:text-black transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            About Us
-                        </Link>
-                        <Link
-                            href="/cohorts"
-                            className="text-lg font-medium text-gray-600 hover:text-black transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Cohorts & Courses
-                        </Link>
-                        <Link
-                            href="/tuition"
-                            className="text-lg font-medium text-gray-600 hover:text-black transition-colors"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Tuition & Dates
-                        </Link>
-                    </nav>
-                    <div className="flex flex-col gap-4">
-                        <Link
-                            href="/apply"
-                            className="bg-purple-600 hover:bg-purple-700 text-white text-center text-lg font-semibold py-3 px-6 rounded-full transition-all duration-200 shadow-sm"
-                            onClick={() => setIsMenuOpen(false)}
-                        >
-                            Apply Now
-                        </Link>
-                    </div>
-                </div>
-            )}
+            {isMenuOpen && <MobileMenu setIsMenuOpen={setIsMenuOpen} />}
         </header>
     );
 };
