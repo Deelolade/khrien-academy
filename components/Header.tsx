@@ -13,7 +13,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100 shadow-sm">
             <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold tracking-tight">
@@ -52,9 +52,9 @@ const Header = () => {
                 <div className="hidden md:flex items-center gap-4">
                     <Link
                         href="/apply"
-                        className="text-center border-5 rounded-full border-r border-t border-black bg-brandPurple px-10 py-2 lg:py-3 hover:bg-brandPurple hover:text-white transition-all duration-50 ease-in-out"
+                        className="text-center border-5 rounded-full border-r border-t font-semibold border-black bg-brandPurple px-10 py-2 lg:py-3 hover:bg-brandPurple hover:text-white transition-all duration-50 ease-in-out"
                     >
-                        Apply Now
+                        Apply to Learn
                     </Link>
                 </div>
 
