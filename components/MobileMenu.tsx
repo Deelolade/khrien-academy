@@ -17,7 +17,7 @@ const MobileMenu = ({ setIsMenuOpen }: MobileMenuProps) => {
                     Home
                 </Link>
                 <Link
-                    href="/about"
+                    href="/about-us"
                     className="text-xl font-medium text-gray-600 hover:text-black transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                 >

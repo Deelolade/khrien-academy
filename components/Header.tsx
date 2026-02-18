@@ -29,7 +29,7 @@ const Header = () => {
                         Home
                     </Link>
                     <Link
-                        href="/about"
+                        href="/about-us"
                         className="text-lg font-medium text-black hover:text-brandPurple transition-colors"
                     >
                         About Us
