@@ -5,7 +5,7 @@ import { FaCalendarAlt, FaMoneyBillWave, FaCheckCircle } from "react-icons/fa";
 const TuitionSection = () => {
     return (
         <section className="bg-white py-24 px-6 md:px-12">
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-360 mx-auto">
                 {/* Header */}
                 <div className="text-center mb-16">
                     <h2 className="text-4xl md:text-6xl font-black mb-4 text-black tracking-tight">

@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = () => {
     return (
-        <section className="min-h-screen flex items-center justify-center bg-white px-6 md:px-12 lg:px-24 py-32">
+        <section className=" flex items-center justify-center bg-white px-6 md:px-12 lg:px-24 py-32">
             <div className="max-w-6xl mx-auto text-center">
                 {/* Headline */}
                 <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-6 text-black leading-tight">
