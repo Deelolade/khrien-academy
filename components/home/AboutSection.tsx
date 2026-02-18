@@ -8,7 +8,7 @@ const AboutSection = () => {
                 <h2 className="text-4xl md:text-5xl lg:text-6xl font-black mb-8 text-black tracking-tight uppercase italic">
                     <span className="text-brandPurple">Education</span> Built With <span className="text-brandPurple">Purpose</span>
                 </h2>
-                <div className="space-y text-lg md:text-lg text-gray-700 leading-relaxed mt-4 max-w-2xl">
+                <div className="space-y text-lg md:text-xl text-gray-600 leading-relaxed mt-4 max-w-2xl">
                     <p>
                         Khrien Academy was created to bridge the gap between curiosity and capability.
                         We focus on clarity over complexity, structure over chaos, and learning that leads to real understanding.
