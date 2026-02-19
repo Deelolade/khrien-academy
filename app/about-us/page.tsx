@@ -30,25 +30,31 @@ const modelItems = [
 
 export default function AboutPage() {
     return (
-        <main className="px-4 lg:px-9 max-w-360 mx-auto">
-            {/* <DarkVeil
-                hueShift={0}
-                noiseIntensity={0}
-                scanlineIntensity={0}
-                speed={0.5}
-                scanlineFrequency={0}
-                warpAmount={0}
-            /> */}
-            {/* ── Hero ── */}
+        <>
+            {/* Fixed Background Layer */}
+            <div className="fixed inset-0 w-full h-full -z-10">
+                <DarkVeil
+                    hueShift={180}
+                    noiseIntensity={0.02}
+                    scanlineIntensity={0.1}
+                    speed={0.3}
+                    scanlineFrequency={0.5}
+                    warpAmount={0.2}
+                />
+            </div>
+
+            {/* Main Content */}
+            <main className="relative px-4 lg:px-9 max-w-360 mx-auto">
+                {/* ── Hero ── */}
             <section className="py-24 px-6 md:px-12 lg:px-24 text-center max-w-4xl mx-auto h-screen mt-20">
                 <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4">
                     About Us
                 </p>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-black leading-tight mb-8">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-tight mb-8">
                     Built to Help You{' '}
                     <span className="text-brandPurple">Grow With Purpose</span>
                 </h1>
-                <p className="text-lg md:text-xl text-gray-700 leading-relaxed max-w-3xl mx-auto">
+                <p className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto">
                     Khrien Academy is a future-focused learning institution built to help individuals develop
                     practical, relevant skills for a rapidly evolving world.
                 </p>
@@ -60,7 +66,7 @@ export default function AboutPage() {
                     <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4 text-center">
                         Our Beliefs
                     </p>
-                    <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight text-center mb-14">
+                    <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center mb-14">
                         We believe learning should be:
                     </h2>
                     <div className="grid md:grid-cols-3 gap-6">
@@ -80,7 +86,7 @@ export default function AboutPage() {
                             );
                         })}
                     </div>
-                    <p className="text-center text-lg md:text-xl text-gray-700 mt-12 leading-relaxed max-w-3xl mx-auto">
+                    <p className="text-center text-lg md:text-xl text-white/80 mt-12 leading-relaxed max-w-3xl mx-auto">
                         Our goal is to help learners move from understanding concepts to applying skills with
                         confidence and clarity.
                     </p>
@@ -109,13 +115,13 @@ export default function AboutPage() {
                             <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4">
                                 How We Teach
                             </p>
-                            <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight mb-6">
+                            <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight mb-6">
                                 Our Teaching Model
                             </h2>
-                            <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                            <p className="text-lg text-white/80 leading-relaxed mb-8">
                                 At Khrien Academy, learning is designed around real understanding and steady progress.
                             </p>
-                            <p className="text-xl md:text-2xl font-bold text-black italic leading-snug">
+                            <p className="text-xl md:text-2xl font-bold text-white/80 italic leading-snug">
                                 We don't rush learning.
                                 <br />
                                 <span className="text-brandPurple">We build it deliberately.</span>
@@ -146,7 +152,7 @@ export default function AboutPage() {
 
             {/* ── Closing CTA ── */}
             <section className="py-10 px-6 md:px-12 lg:px-24 text-center max-w-360 mx-auto mb-10">
-                <div className="bg-black rounded-3xl py-20 px-8 max-w-4xl mx-auto">
+                <div className="bg-brandPurple rounded-3xl py-20 px-8 max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         Ready to Start?
                     </h2>
@@ -155,13 +161,14 @@ export default function AboutPage() {
                     </p>
                     <Link
                         href="/apply"
-                        className="inline-block bg-brandPurple text-white font-semibold px-10 py-4 rounded-full hover:opacity-90 transition-all duration-300 text-lg shadow-md hover:shadow-lg border border-black border-b-4 border-l-4"
+                        className="inline-block bg-brandYellow text-white font-semibold px-10 py-4 rounded-full hover:opacity-90 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
                     >
                         Apply Now
                     </Link>
                 </div>
             </section>
 
-        </main>
+            </main>
+        </>
     )
 }

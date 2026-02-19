@@ -61,7 +61,7 @@ const faqs = [
 function FAQItem({ q, a }: { q: string; a: string }) {
     const [open, setOpen] = useState(false)
     return (
-        <div className="border border-gray-200 rounded-2xl overflow-hidden">
+        <div className="bg-white border border-gray-200 rounded-2xl overflow-hidden">
             <button
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between gap-4 px-7 py-6 text-left hover:bg-white transition-colors duration-200"
@@ -82,12 +82,12 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQSection() {
     return (
-        <section className="bg-brandGray rounded-3xl py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto mb-10">
+        <section className=" rounded-3xl py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto mb-10">
             <div className="max-w-3xl mx-auto">
                 <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4 text-center">
                     FAQ
                 </p>
-                <h2 className="text-4xl md:text-5xl font-bold text-black tracking-tight text-center mb-12">
+                <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight text-center mb-12">
                     Frequently Asked Questions
                 </h2>
                 <div className="space-y-4">
