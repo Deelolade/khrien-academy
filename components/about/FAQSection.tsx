@@ -82,8 +82,8 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQSection() {
     return (
-        <section className=" rounded-3xl py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto mb-10">
-            <div className="max-w-3xl mx-auto">
+        <section className=" rounded-3xl py-20 px-6 md:px-0  max-w-360 mx-auto mb-10">
+            <div className="max-w-5xl mx-auto">
                 <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4 text-center">
                     FAQ
                 </p>

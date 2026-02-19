@@ -61,7 +61,7 @@ export default function AboutPage() {
             </section>
 
             {/* ── We Believe ── */}
-            <section className=" rounded-3xl py-10 px-6 md:px-12 lg:px-10 max-w-360 mx-auto mb-6">
+            <section className=" rounded-3xl py-10 px-6 md:px-0 max-w-360 mx-auto mb-6">
                 <div className="mx-auto">
                     <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4 text-center">
                         Our Beliefs
@@ -94,8 +94,8 @@ export default function AboutPage() {
             </section>
 
             {/* ── Mission ── */}
-            <section className="py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto">
-                <div className="bg-brandPurple rounded-3xl p-12 md:p-16 text-white text-center max-w-4xl mx-auto">
+            <section className="py-20 px-6 md:px-0 max-w-360 mx-auto">
+                <div className="bg-brandPurple rounded-3xl p-12 md:p-16 text-white text-center max-w-5xl mx-auto">
                     <p className="text-sm font-semibold uppercase tracking-widest opacity-70 mb-4">
                         Our Mission
                     </p>
@@ -107,8 +107,8 @@ export default function AboutPage() {
             </section>
 
             {/* ── Teaching Model ── */}
-            <section className="py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto">
-                <div className="max-w-5xl mx-auto">
+            <section className="py-20 px-6 md:px-0 max-w-360 mx-auto">
+                <div className="max mx-auto">
                     <div className="grid md:grid-cols-2 gap-16 items-start">
                         {/* Left: copy */}
                         <div>
@@ -130,7 +130,7 @@ export default function AboutPage() {
 
                         {/* Right: list */}
                         <div className="space-y-4">
-                            <p className="text-base font-semibold text-gray-500 mb-2">Our teaching model includes:</p>
+                            <p className="text-base font-semibold text-white/80 mb-2">Our teaching model includes:</p>
                             {modelItems.map(({ icon: Icon, label, color }) => (
                                 <div
                                     key={label}
@@ -151,8 +151,8 @@ export default function AboutPage() {
             <FAQSection />
 
             {/* ── Closing CTA ── */}
-            <section className="py-10 px-6 md:px-12 lg:px-24 text-center max-w-360 mx-auto mb-10">
-                <div className="bg-brandPurple rounded-3xl py-20 px-8 max-w-4xl mx-auto">
+            <section className="py-10 px-6 md:px-0 text-center max-w-360 mx-auto mb-10">
+                <div className="bg-brandPurple rounded-3xl py-20 px-8 max-w-5xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         Ready to Start?
                     </h2>
@@ -161,7 +161,7 @@ export default function AboutPage() {
                     </p>
                     <Link
                         href="/apply"
-                        className="inline-block bg-brandYellow text-white font-semibold px-10 py-4 rounded-full hover:opacity-90 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
+                        className="inline-block bg-brandYellow text-white font-semibold px-10 py-3 rounded-full hover:opacity-90 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
                     >
                         Apply Now
                     </Link>
