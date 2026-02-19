@@ -61,7 +61,7 @@ const faqs = [
 function FAQItem({ q, a }: { q: string; a: string }) {
     const [open, setOpen] = useState(false)
     return (
-        <div className="border border-gray-200 rounded-2xl overflow-hidden">
+        <div className="border border-gray-200 rounded-2xl overflow-hidden hover:border-brandPurple transition-all duration-300">
             <button
                 onClick={() => setOpen(!open)}
                 className="w-full flex items-center justify-between gap-4 px-7 py-6 text-left hover:bg-white transition-colors duration-200"
@@ -82,7 +82,7 @@ function FAQItem({ q, a }: { q: string; a: string }) {
 
 export default function FAQSection() {
     return (
-        <section className="bg-brandGray rounded-3xl py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto mb-10">
+        <section className="bg-white rounded-3xl py-20 px-6 md:px-12 lg:px-24 max-w-360 mx-auto mb-10">
             <div className="max-w-3xl mx-auto">
                 <p className="text-sm font-semibold uppercase tracking-widest text-brandPurple mb-4 text-center">
                     FAQ

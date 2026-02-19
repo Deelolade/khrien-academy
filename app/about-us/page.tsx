@@ -128,7 +128,7 @@ export default function AboutPage() {
                             {modelItems.map(({ icon: Icon, label, color }) => (
                                 <div
                                     key={label}
-                                    className="flex items-start gap-4 bg-brandGray rounded-2xl p-5 border border-gray-200 hover:border-brandPurple hover:shadow-md transition-all duration-300"
+                                    className="flex items-start gap-4 bg-white rounded-2xl p-5 border border-gray-200 hover:border-brandPurple hover:shadow-md transition-all duration-300"
                                 >
                                     <div className={`${color} mt-0.5 shrink-0`}>
                                         <Icon className="text-2xl" />
@@ -146,7 +146,7 @@ export default function AboutPage() {
 
             {/* ── Closing CTA ── */}
             <section className="py-10 px-6 md:px-12 lg:px-24 text-center max-w-360 mx-auto mb-10">
-                <div className="bg-black rounded-3xl py-20 px-8 max-w-4xl mx-auto">
+                <div className="bg-brandPurple rounded-3xl py-20 px-8 max-w-4xl mx-auto">
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight">
                         Ready to Start?
                     </h2>
@@ -155,7 +155,7 @@ export default function AboutPage() {
                     </p>
                     <Link
                         href="/apply"
-                        className="inline-block bg-brandPurple text-white font-semibold px-10 py-4 rounded-full hover:opacity-90 transition-all duration-300 text-lg shadow-md hover:shadow-lg border border-black border-b-4 border-l-4"
+                        className="inline-block bg-brandYellow text-white font-semibold px-10 py-3 rounded-full hover:opacity-90 transition-all duration-300 text-lg shadow-md hover:shadow-lg"
                     >
                         Apply Now
                     </Link>
