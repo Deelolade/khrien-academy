@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 const Hero = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -44,37 +44,35 @@ const Hero = () => {
             setCurrentIndex((prevIndex) =>
                 prevIndex === imageSlider.length - 1 ? 0 : prevIndex + 1
             );
-        }, 4000);
+        }, 2000);
 
         return () => clearInterval(interval);
     }, [imageSlider.length]);
 
     return (
-        <section className="relative flex items-center justify-center min-h-screen w-screen bg-black overflow-hidden">
+        <section className="max-w-360 mx-auto relative mt-24 flex items-center justify-center min-h-screen w-screen bg-black overflow-hidden rounded-3xl">
             {/* Image Carousel */}
-            <AnimatePresence mode="wait">
+            {imageSlider.map((image, index) => (
                 <motion.div
-                    key={currentIndex}
-                    initial={{ opacity: 0.8 }}
-                    animate={{ opacity: 3 }}
-                    exit={{ opacity: 0.8 }}
-                    transition={{ duration: 0.8 }}
+                    key={image.image}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: currentIndex === index ? 0.8 : 0 }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
                     className="absolute inset-0"
                 >
                     <Image
-                        src={imageSlider[currentIndex].image}
-                        alt={imageSlider[currentIndex].alt}
+                        src={image.image}
+                        alt={image.alt}
                         fill
-                        priority
+                        priority={index === 0}
                         className="w-full h-full object-cover"
                         sizes="100vw"
                     />
                 </motion.div>
-            </AnimatePresence>
-
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/50" />
-            <div className="max-w-360 mx-auto text-center pt-16 md:pt-20 relative z-10">
+            ))}
+            <div className="absolute inset-0 bg-black/20" />
+            {/* contents */}
+            <div className="text-center relative z-10">
                 {/* Headline */}
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal tracking-tight mb-4 md:mb-6 text-white/80 leading-tight">
                     Learn the Skills Shaping the Future.

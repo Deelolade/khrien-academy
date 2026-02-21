@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 import MobileMenu from "./MobileMenu";
+import { FaUser } from "react-icons/fa";
+import { HiLogin } from "react-icons/hi";
+import { MdLogin } from "react-icons/md";
 
 const Header = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,7 +16,7 @@ const Header = () => {
     };
 
     return (
-        <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-3xl border-b border-gray-100 shadow-sm">
+        <header className="fixed top-0 left-0 right-0 z-50 bg-white backdrop-blur-3xl">
             <div className="max-w-360 mx-auto  h-20 flex items-center justify-evenly">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold tracking-tight">
@@ -46,16 +49,18 @@ const Header = () => {
                 <div className="hidden md:flex items-center justify-end gap-4">
                     <Link
                         href="/apply"
-                        className="text-center rounded-full text-white bg-brandPurple px-10 py-2 lg:py-3 hover:bg-brandPurple/90 hover:text-white transition-all duration-50 ease-in-out"
+                        className="flex items-center gap-2 text-center rounded-sm text-white bg-brandPurple px-5 py-2 lg:py-2.5 hover:bg-brandPurple/90 hover:text-white transition-all duration-50 ease-in-out"
                     >
                         Apply Now
+                        <FaUser className="text-xl" />
                     </Link>
                     <a
                         href="https://lms.khrien.com"
                         target="blank"
-                        className="text-center rounded-full text-white bg-brandGreen px-10 py-2 lg:py-3 hover:bg-brandPurple/90 hover:text-white transition-all duration-50 ease-in-out"
+                        className="flex items-center gap-2 text-center rounded-sm text-brandGreen bg-white px-5 py-2 lg:py-2 border-2 border-brandGreen hover:bg-brandGreen hover:text-white transition-all duration-200 ease-in-out"
                     >
                         Login
+                        <MdLogin className="text-xl" />
                     </a>
                 </div>
 
