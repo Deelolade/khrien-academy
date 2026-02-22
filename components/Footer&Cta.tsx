@@ -7,11 +7,36 @@ const Footer = () => {
   return (
     <div className='bg-black relative'>
       {/* <div className="absolute inset-0 bg-brandGreen/10 z-0"></div> */}
-      <div className="">
-        <Image src="/lines/bg-line-center.webp" alt="Lines Background" className='absolute top-0 left-0 right-0 z-0' width={500} height={500} />
-        <Image src="/lines/bg-line-left.webp" alt="Lines Background" className='absolute top-0 left-0 right-0 z-0' width={500} height={500} />
-        <Image src="/lines/bg-line-right.webp" alt="Lines Background" className='absolute top-0 left-0 right-0 z-0' width={500} height={500} />
-      </div>
+      <div className="relative ">
+
+    {/* LEFT */}
+    <Image
+      src="/lines/bg-line-left.webp"
+      alt="Lines Left"
+      width={500}
+      height={500}
+      className="absolute top-0 left-0 z-0"
+    />
+
+    {/* CENTER */}
+    <Image
+      src="/lines/bg-line-center.webp"
+      alt="Lines Center"
+      width={500}
+      height={500}
+      className="absolute top-0 left-1/2 -translate-x-1/2 z-0"
+    />
+
+    {/* RIGHT */}
+    <Image
+      src="/lines/bg-line-right.webp"
+      alt="Lines Right"
+      width={500}
+      height={500}
+      className="absolute top-0 right-0 z-0"
+    />
+
+  </div>
       <section className="bg-black text-white py-10 lg:py-20 my-6">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal mb-3  tracking-tight leading-tight">
@@ -33,7 +58,7 @@ const Footer = () => {
           <div className="flex flex-col gap-3 justify-center items-center">
             <Image src="/academylogo.webp" alt="Logo" width={150} height={150} />
             <p>A platform for learning and sharing knowledge.</p>
-            <div className='nav-buttons flex justify-center gap-4 items-center my-5'>
+            <div className='nav-buttons flex justify-center gap-6 items-center my-5'>
               <Link
                 href="/apply"
                 className="flex items-center gap-2 text-center rounded-sm text-white bg-brandPurple px-5 py-2 lg:py-2.5 hover:bg-brandPurple/90 hover:text-white transition-all duration-50 ease-in-out"
@@ -52,7 +77,7 @@ const Footer = () => {
             </div>
           </div>
           <hr className='my-5 mx-auto max-w-360' />
-          <div className='grid grid-cols-1 md:grid-cols-3'>
+          <div className='grid grid-cols-1 md:grid-cols-3 mt-6'>
             <div>
               <p className='text-sm'>&copy; {new Date().getFullYear()} Khrien Academy. All rights reserved.</p>
             </div>
